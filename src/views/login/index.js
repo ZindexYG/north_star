@@ -137,7 +137,7 @@ const Login = props => {
               sm: { span: 24 }
             }}
             onSubmit={e => handleSubmit(e)}>
-            <h1 className="login-log-title">BTS</h1>
+            <h1 className="login-log-title">North Star</h1>
             <FormItem>
               {getFieldDecorator('userAccount', {
                 rules: [
@@ -151,7 +151,7 @@ const Login = props => {
                     validator: NumOrChar
                   }
                 ]
-              })(<Input autoComplete="off" size="large" placeholder="请输入用户账号" prefix={<Icon type="user" />} />)}
+              })(<Input autoComplete="off" size="large" placeholder="admin" prefix={<Icon type="user" />} />)}
             </FormItem>
             <FormItem>
               {getFieldDecorator('password', {
@@ -166,7 +166,7 @@ const Login = props => {
                   autoComplete="off"
                   size="large"
                   type="password"
-                  placeholder="请输入登录密码"
+                  placeholder="12345"
                   prefix={<Icon type="lock" />}
                 />
               )}
