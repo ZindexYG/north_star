@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, Spin, DatePicker, Card, Select, Button, message, Icon, Tooltip } from 'antd'
+import React from 'react'
+import { Row, Col, DatePicker, Card } from 'antd'
 import { animated, useSpring, config } from 'react-spring'
 import { ChartsPie, ChartsLine, PlanList } from './components'
 import _random from 'lodash.random'

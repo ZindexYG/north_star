@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+// import { useDispatch } from 'react-redux'
 import { ConfigProvider, message } from 'antd'
 import zh_CN from 'antd/lib/locale-provider/zh_CN'
 import 'moment/locale/zh-cn'

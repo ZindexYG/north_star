@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { Form, Input, Button, message, Row, Col, Icon } from 'antd'
 import ReactCanvasNest from 'react-canvas-nest'
-import IconFont from '@/componetns/iconFont'
-import { Login as LoginDispatch, GetUserById, auth_status, getUserInfo, InitGetUserInfo } from './reducer'
+// import IconFont from '@/componetns/iconFont'
+import { Login as LoginDispatch, auth_status, getUserInfo, } from './reducer'
 import './index.less'
 
 const FormItem = Form.Item
@@ -31,7 +31,7 @@ const Login = props => {
         history.push('/main')
       })()
     // dispatch(InitAuthStatus())
-  }, [AuthStatus.status, AuthStatus, dispatch, msg, status, userInfo])
+  }, [AuthStatus.status, AuthStatus, dispatch, msg, status, userInfo,history])
 
   // useEffect(() => {
   //   const { userInfo } = AuthStatus

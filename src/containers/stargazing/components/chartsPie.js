@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { useSelector } from 'react-redux'
+import React, { useState, useEffect } from 'react'
+// import { useSelector } from 'react-redux'
 import { Chart, Geom, Axis, Tooltip, Coord, Guide, Legend } from 'bizcharts'
 import DataSet from '@antv/data-set'
 import { colors } from '@/utils/colors'
 
 const { Html } = Guide
 
-const useClientRect = () => {
-  const [rect, setRect] = useState(null)
-  const { width } = useSelector(state => state.resizeReducer)
-  const ref = useCallback(
-    node => {
-      if (node !== null && width !== null) {
-        setRect(node.getBoundingClientRect())
-      }
-    },
-    [width]
-  )
-  return [rect, ref]
-}
+// const useClientRect = () => {
+//   const [rect, setRect] = useState(null)
+//   const { width } = useSelector(state => state.resizeReducer)
+//   const ref = useCallback(
+//     node => {
+//       if (node !== null && width !== null) {
+//         setRect(node.getBoundingClientRect())
+//       }
+//     },
+//     [width]
+//   )
+//   return [rect, ref]
+// }
 
 const ChartsPie = props => {
   const { title } = props

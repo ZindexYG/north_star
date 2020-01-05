@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Chart, Geom, Tooltip, Legend, Axis } from 'bizcharts'
 import moment from 'moment'
 import { DataSet } from '@antv/data-set'
@@ -67,7 +67,7 @@ const MidCardChart = props => {
     })
 
     setChartsResult({ dv, minDay, maxDay })
-  }, [])
+  }, [records])
 
   const scale = {
     day: {

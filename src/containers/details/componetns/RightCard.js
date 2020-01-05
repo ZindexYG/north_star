@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { Card, Row, Col, Spin, Button, message } from 'antd'
-import _find from 'lodash.find'
+import React from 'react'
+import { Card, Row, Col } from 'antd'
+// import _find from 'lodash.find'
 import RightCardSaliency from './RightCardSaliency.js'
 import RightCardTable from './RightCardTable.js'
 

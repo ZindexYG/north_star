@@ -1,13 +1,11 @@
 import React from 'react'
 import { Table } from 'antd'
-import moment from 'moment'
+// import moment from 'moment'
 // import _sortby from 'lodash.sortby'
 import _uniqby from 'lodash.uniqby'
 
 const MidCardTable = props => {
-  const { records, type } = props
-
-  console.log('MidCardTable', records)
+  const { records } = props
 
   const initTDColumns = [{ title: '版本名称', dataIndex: 'versionName', key: 'versionName', fixed: 'left', width: 165 }]
 
@@ -29,6 +27,7 @@ const MidCardTable = props => {
       specimen: el.specimen,
       id: el.versionId
     })
+    return el
   })
 
   source.map(el => {

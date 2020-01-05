@@ -1,10 +1,10 @@
 import React, { memo, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, Dropdown, Icon, Menu, Tooltip, message } from 'antd'
+import { Row, Col, Dropdown, Menu, Tooltip, message } from 'antd'
 import IconFont from '@/componetns/iconFont'
 import './layoutHeader.less'
-import { modalShow, logout, auth_status, InitAuthStatus } from './reducer.js'
+import {  logout, auth_status, InitAuthStatus } from './reducer.js'
 
 const LayoutHeader = memo(props => {
   const MenuItem = Menu.Item
