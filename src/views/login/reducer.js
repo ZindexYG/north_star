@@ -2,7 +2,6 @@ import { createSelector } from 'reselect'
 
 const loginReducer = {
   auth_status: (state = { status: '', msg: '', userInfo: null }, action) => {
-    console.log('action',action)
     switch (action.type) {
       case 'login':
       case 'logout':
@@ -14,7 +13,7 @@ const loginReducer = {
         return Object.assign({}, state, {
           status: 'success',
           msg: '登录成功',
-          userInfo: action.payload.result
+          userInfo: action.payload.result.userInfo
         })
       case 'logout_success':
         return Object.assign({}, state, {

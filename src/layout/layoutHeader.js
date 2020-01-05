@@ -1,20 +1,21 @@
 import React, { memo, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Dropdown, Icon, Menu, Tooltip, message } from 'antd'
 import IconFont from '@/componetns/iconFont'
 import './layoutHeader.less'
-import { modalShow, logout, auth_status,InitAuthStatus } from './reducer.js'
+import { modalShow, logout, auth_status, InitAuthStatus } from './reducer.js'
 
-const LayoutHeader = props => {
+const LayoutHeader = memo(props => {
   const MenuItem = Menu.Item
   const dispatch = useDispatch()
   const history = useHistory()
+  const location = useLocation()
   const AuthStatus = useSelector(auth_status)
 
   const { user_account, lstRole = '管理员' } = JSON.parse(localStorage.getItem('userInfo'))
 
-    useEffect(() => {
+  useEffect(() => {
     if (AuthStatus.status !== '') {
       const { status, msg, userInfo } = AuthStatus
       // console.log('userInfo',userInfo)
@@ -46,20 +47,13 @@ const LayoutHeader = props => {
   ]
   // right-icon
   const headerIndexNofilter = [
-    {
-      title: '观星台',
-      listDom: <Icon type="dashboard" />,
-      onclick: () => {
-        history.push('/main/stargzing')
-      }
-    },
-    {
-      title: '公告',
-      listDom: <Icon type="sound" />,
-      onclick: () => {
-        // dispatch(modalShow({ type: 'notice' }))
-      }
-    },
+    // {
+    //   title: '公告',
+    //   listDom: <Icon type="sound" />,
+    //   onclick: () => {
+    //     dispatch(modalShow())
+    //   }
+    // },
     {
       title: null,
       listDom: (
@@ -83,10 +77,33 @@ const LayoutHeader = props => {
     }
   ]
 
+  // console.log('location',location.state)
+
+  const { records = {} } = location.state || {}
+  // console.log('records',records)
+  let { planId = 0, planName = '' } = records || {}
   // title
   const titleContent = {
-    '/': '个人中心',
-    '/main': '个人中心'
+    '/': '观星台',
+    '/main': '观星台',
+    '/main/details': (
+      <div className="top">
+        <Tooltip
+          className="top-plan top-plan-tooltip"
+          overlayClassName="top-plan-tooltip-wrapper"
+          placement="bottom"
+          arrowPointAtCenter
+          title={
+            <div>
+              <span className="top-plan-id" style={{ marginRight: 10 }}>{`ID:${planId}`}</span>
+              <span className="top-plan-name">{planName}</span>
+            </div>
+          }>
+          <span className="top-plan top-plan-id">{`ID:${planId}`}</span>
+          <span className="top-plan top-plan-name">{planName}</span>
+        </Tooltip>
+      </div>
+    )
   }
 
   return (
@@ -96,9 +113,9 @@ const LayoutHeader = props => {
           className="header-left"
           onClick={() => {
             sessionStorage.clear()
-            window.location.replace(`${window.location.origin}/main/laboratory/list`)
+            window.location.replace(`${window.location.origin}/`)
           }}>
-          <div className="logo" />
+          North Star
         </h1>
       </Col>
       <Col xl={12} lg={12} md={12}>
@@ -121,6 +138,6 @@ const LayoutHeader = props => {
       </Col>
     </Row>
   )
-}
+})
 
 export default LayoutHeader

@@ -17,6 +17,7 @@
     "lodash.isequal": "^4.5.0",
     "lodash.max": "^4.0.1",
     "lodash.min": "^4.0.1",
+    "lodash.random": "^3.2.0",
     "lodash.sortby": "^4.7.0",
     "lodash.throttle": "^4.1.1",
     "lodash.uniqby": "^4.7.0",

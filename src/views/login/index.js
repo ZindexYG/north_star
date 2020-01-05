@@ -22,7 +22,6 @@ const Login = props => {
   const { status, msg, userInfo } = AuthStatus
 
   useEffect(() => {
-    console.log('AuthStatus',AuthStatus)
     status === 'error' && message[status](msg)
     // status === 'success' && dispatch(GetUserById({ userId: userInfo.userId }))
     status === 'success' &&

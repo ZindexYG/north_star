@@ -34,13 +34,15 @@ const UnAuthRoute = ({ component: Component, ...rest }) => (
 const App = props => {
   return (
     <ConfigProvider locale={zh_CN}>
-      <Router>
-        <Switch>
-            <UnAuthRoute path='/login' component={Login} />
-            <AuthRoute exact path='/' component={Main} />
-            <AuthRoute path='/main' component={Main} />Ï
-        </Switch>
-      </Router>
+      <div className="app">
+        <Router>
+          <Switch>
+            <UnAuthRoute path="/login" component={Login} />
+            <AuthRoute exact path="/" component={Main} />
+            <AuthRoute path="/main" component={Main} />Ï
+          </Switch>
+        </Router>
+      </div>
     </ConfigProvider>
   )
 }

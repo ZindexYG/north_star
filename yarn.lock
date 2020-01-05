@@ -6103,6 +6103,10 @@ lodash.min@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npm.taobao.org/lodash.min/download/lodash.min-4.0.1.tgz#4ac1b9a8baf8b6d28a690d716512510cfc14708c"
 
+lodash.random@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.npm.taobao.org/lodash.random/download/lodash.random-3.2.0.tgz#96e24e763333199130d2c9e2fd57f91703cc262d"
+
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.npm.taobao.org/lodash.sortby/download/lodash.sortby-4.7.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash.sortby%2Fdownload%2Flodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"

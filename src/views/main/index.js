@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { Layout } from 'antd'
 import LayoutHeader from '@/layout/layoutHeader'
 
+import Stargzing from '@/containers/stargazing'
+import Details from '@/containers/details'
+
 /*G2 全局样式*/
 import { G2 } from 'bizcharts'
 import GlobalTheme from '@/utils/G2.theme.js'
@@ -20,11 +23,12 @@ const Main = props => {
       <Header style={{ position: 'fixed', zIndex: 999, width: '100%' }}>
         <LayoutHeader />
       </Header>
-      <Content>
+      <Content className="main-containers">
         <Router />
         <Switch>
-          {/*                       <Route exact path="/main/manage" component={Manage} />
-            <Route exact path="/main/create" component={Create} />*/}
+          <Redirect exact from="/" to="/main" />
+          <Route exact path="/main" component={Stargzing} />
+          <Route exact path="/main/details" component={Details} />
         </Switch>
       </Content>
     </>
