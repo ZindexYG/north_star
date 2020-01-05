@@ -1,0 +1,103 @@
+// const COLOR_PLATE_8 = ['#1890FF', '#2FC25B', '#FACC14', '#8543E0', '#13C2C2', '#3436C7', '#F04864', '#223273']
+
+.result-container {
+  .num-container {
+    min-height: 167px;
+    background-repeat: no-repeat;
+    background-size: 22.5%;
+    background-position: 90% center;
+    &.days {
+      background-image: url(~@images/days.png);
+    }
+    &.specimen {
+      // background-size: 32%;
+      background-image: url(~@images/num.png);
+    }
+    .ant-card-head-title {
+      // padding: 16px 0 0;
+    }
+    .ant-card-body {
+      // padding: 0 16px;
+    }
+  }
+  .num-box {
+    font-size: 52px;
+    font-weight: 600;
+    color: rgba(2, 229, 254, 1);
+    line-height: 62px;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+.result-right-container {
+  .version-row {
+    margin: 0 !important;
+    margin-bottom: 5px !important;
+    // font-size: 12px;
+  }
+  .pie {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 5px solid #fff;
+    text-align: center;
+    line-height: 75px;
+    font-size: 12px;
+  }
+  .version-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.1em;
+  }
+  .num-p {
+    margin-bottom: 0;
+    span {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+  .count-p {
+    // line-height: 200px;
+    margin-bottom: 0;
+  }
+}
+.ant-card-head-title {
+  .select-group {
+    margin-right: 10px;
+  }
+}
+.saliency-card {
+  .ant-card-body {
+    min-height: 323px;
+    max-height: 323px;
+    overflow-y: auto;
+    .ant-spin-nested-loading {
+      top: 20px;
+    }
+    .no-data-container {
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      line-height: 200px;
+    }
+  }
+}
+.specimen-count-chart-container{
+    .ant-card-body {
+    min-height: 323px;
+    max-height: 323px;
+  }
+}
+.mid-card-chart-container{
+  .ant-card-body {
+    min-height: 385px;
+    max-height: 385px;
+  }
+}
+.result-mid-table-container {
+  min-height: 327px;
+}
+.result-right-table-container {
+  min-height: 394px;
+  max-height: 394px;
+}

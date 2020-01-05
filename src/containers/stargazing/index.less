@@ -1,0 +1,97 @@
+.stargazing-container {
+  .g2-tooltip {
+    min-width: 200px;
+  }
+  .ant-calendar-picker {
+    margin: auto;
+    // width: 100%;
+  }
+  .ant-calendar-range-picker-input {
+    font-size: 24px;
+  }
+  .ant-calendar-range-picker-separator {
+    color: #a5d9ee;
+    font-size: 18px;
+  }
+  .ant-calendar-picker-icon {
+    color: #a5d9ee;
+    font-size: 18px;
+    left: 12px;
+    right: 0;
+    // display: none;
+  }
+  .ant-select-selection {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .user-action-container {
+    min-height: 393px;
+  }
+}
+
+.interfaceNum-container {
+  position: relative;
+  height: 375px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(~@images/stargazing-interfaceNum.png);
+  // background-image: url(~@images/stargazing-interfaceNum-backup.png);
+  .tag-context {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+  }
+  .num-tag {
+    position: absolute;
+    bottom: 35.5%;
+    left: 0;
+    right: 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+    font-size: 32px;
+    &:hover {
+      // color: #ffd700;
+    }
+  }
+}
+.info-tag {
+  height: 250px;
+  background-position: center center;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  text-align: center;
+  &.avg-time-container {
+    background-image: url(~@images/stargazing-tag-planNum.png);
+  }
+  &.plan-num-container {
+    background-size: 50%;
+    background-image: url(~@images/stargazing-tag-avgTime.png);
+  }
+  .num-wrapper {
+    background-position: center center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-image: url(~@images/stargazing-tag-bg.png);
+    line-height: 250px;
+    text-align: center;
+    font-size: 32px;
+    .tag-unit {
+      margin-left: 8px;
+      font-size: 16px;
+    }
+  }
+  .tag-context {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 18px;
+  }
+}
