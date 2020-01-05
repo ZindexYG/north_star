@@ -1,0 +1,21 @@
+.search-input-wrapper {
+  border: 1px solid rgba(37, 113, 255, 1);
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(37, 113, 255, 0.58);
+  background: rgba(37, 113, 255, 0.05);
+  transform: skewx(-15deg) translatex(15px);
+  // transform-origin: bottom left;
+  .search-input {
+    transform: skewx(15deg);
+    .ant-input {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .anticon {
+      color: rgba(37, 113, 255, 1);
+    }
+  }
+}

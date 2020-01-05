@@ -1,0 +1,73 @@
+::-webkit-scrollbar {
+  background-color: #153164;
+}
+::-webkit-scrollbar-corner {
+  background-color: #153164;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  transition: all 0.2s;
+  background: #395386;
+
+  // border-radius: .5rem;
+
+  &:hover {
+    background-color: #476196;
+  }
+}
+
+html,
+div {
+  scrollbar-width: thin;
+  scrollbar-color: #395386 #153164;
+}
+
+@text-color: #e5e6ec;
+@body-background: #050936;
+// layout
+@layout-header-background: #050936;
+@layout-body-background: #050936;
+@layout-header-padding: 0 10px;
+// table
+@table-border-radius-base: 0;
+
+@table-header-bg: #0c1d4e;
+@table-header-color: #b9ccdf;
+@table-row-hover-bg: #1e407f;
+
+// modal
+@modal-body-padding: 24px;
+@modal-header-bg: #0c1d4e;
+@modal-heading-color: rgb(164, 216, 252);
+@modal-footer-bg: transparent;
+@modal-footer-border-color-split: @border-color-split;
+@modal-mask-bg: fade(@black, 45%);
+
+// form && input && select && Radio
+@label-color: #acb1c2;
+@input-bg: rgba(118, 194, 255, 0.24);
+@input-border-color: rgba(118, 194, 255, 0.24);
+@input-disabled-bg: rgba(0, 0, 0, 0);
+@select-border-color: rgba(118, 194, 255, 0.24);
+@select-dropdown-bg: #396098;
+@select-item-selected-bg: @background-color-light;
+@select-item-active-bg: @item-active-bg;
+
+// card
+
+@card-radius: 0;
+@card-background: rgba(0, 0, 0, 0);
+@card-head-background: rgba(0, 0, 0, 0);
+@card-head-color: rgba(167, 219, 255, 1);
+@card-shadow: none;
+
+// switch
+@switch-color: #0893f5;
+
+// btn
+@btn-default-bg: rgba(0, 0, 0, 0);
+@btn-default-border: #2571ff;

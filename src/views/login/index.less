@@ -1,0 +1,230 @@
+@import './animate.less';
+// @import './theme.less'; //覆盖主图
+
+@bts-logo: url(~@images/bts-logo.png);
+@animate-light: url(~@images/animate-top-light.png);
+@animate-static-left: url(~@images/animate-static-left.png);
+@animate-static-right: url(~@images/animate-static-right.png);
+@animate-static-bottom: url(~@images/animate-static-bottom.png);
+@animate-static-bottom-light: url(~@images/animate-static-bottom-light.png);
+// 动作 - 图片
+@animate-img-1: url(~@images/animate-img-1.png);
+@animate-img-2: url(~@images/animate-img-2.png);
+@animate-img-3: url(~@images/animate-img-3.png);
+@animate-img-4: url(~@images/animate-img-4.png);
+
+// border - image
+@border-img: url(~@images/border-image.png);
+@border-hover-img: url(~@images/border-hover-image.png);
+
+.login-container {
+  position: fixed !important;
+  // margin-top: 17.5em;
+  height: 100%;
+  width: 100%;
+  .canvasNest {
+    position: fixed !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  // 060a36
+  .container {
+    &.ant-col {
+      padding-top: 17.5em;
+      height: 100%;
+    }
+    &.left {
+      background: radial-gradient(at 50% -50%, rgba(8, 47, 152, 1) 200px, rgba(8, 47, 152, 0) 50%, rgba(7, 12, 65, 0));
+    }
+    &.right {
+      background: radial-gradient(at 40% 200%, rgba(8, 47, 152, 1) 140px, rgba(8, 47, 152, 0) 50%, rgba(7, 12, 65, 0));
+      // background: radial-gradient(
+      //   ellipse farthest-corner at 25% 275%,
+      //   rgba(8, 47, 152, 1) 50%,
+      //   rgba(8, 47, 152, 0)
+      // );
+    }
+  }
+
+  .login-animate-container {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 875px;
+    height: 430px;
+    .animate {
+      position: absolute;
+      z-index: 2;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .animate-1 {
+      top: 15px;
+      right: 220px;
+      width: 100px;
+      height: 100px;
+      background-image: @animate-img-1;
+    }
+    .animate-2 {
+      top: 150px;
+      right: 135px;
+      width: 75px;
+      height: 75px;
+      background-image: @animate-img-2;
+    }
+    .animate-3 {
+      top: 120px;
+      left: 80px;
+      width: 200px;
+      height: 125px;
+      background-image: @animate-img-3;
+    }
+    .animate-4 {
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 310px;
+      height: 170px;
+      background-image: @animate-img-4;
+    }
+    .animate-top-light {
+      position: absolute;
+      top: 2%;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100px;
+      height: 100px;
+      background-image: @animate-light;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .animate-left {
+      position: absolute;
+      left: 15%;
+      bottom: 0;
+      top: 0;
+      width: 35%;
+      height: 345px;
+      background-image: @animate-static-left;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .animate-right {
+      position: absolute;
+      right: 18%;
+      bottom: 0;
+      top: 0;
+      width: 32.5%;
+      height: 360px;
+      position: absolute;
+      background-image: @animate-static-right;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .animate-bottom-light {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 35%;
+      height: 135px;
+      background-image: @animate-static-bottom-light;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 2;
+      // animate-static-bottom-light
+    }
+    .animate-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 75%;
+      height: 135px;
+      background-image: @animate-static-bottom;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .login-form-container {
+    position: relative;
+    padding: 40px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    z-index: 99;
+    background-color: rgb(28, 32, 72);
+    border: 1px solid #0b7ab5;
+    .login-log-title {
+      font-size: 0;
+      margin-top: 10px;
+      margin-bottom: 50px;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      background-image: @bts-logo;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .ant-input {
+      border-radius: 6px;
+    }
+    .login-form-button {
+      margin-top: 25px;
+    }
+    &:hover {
+      // border: 1px solid #0db8ff;
+      .container-border {
+        background-image: @border-hover-img;
+      }
+    }
+    .container-border {
+      position: absolute;
+      z-index: 2;
+      width: 38px;
+      height: 38px;
+      background-image: @border-img;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      // &:hover {
+      //   background-image: @border-hover-img;
+      // }
+      &.top-left {
+        top: 0;
+        left: 0;
+        transform: rotate(270deg);
+      }
+      &.top-right {
+        top: 0;
+        right: 0;
+      }
+      &.bottom-left {
+        bottom: 0;
+        left: 0;
+        transform: rotate(180deg);
+      }
+      &.bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
