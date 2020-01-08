@@ -17,6 +17,12 @@
 ### 二、开发相关
 #### 1. 技术栈部分
 - 框架和库
+  + 服务器
+    -   Nignx
+  + 后端
+    -   Node + Express
+    -   PostgreSql
+  + 前端
     -   React
     -   React-Redux
     -   React-Router
