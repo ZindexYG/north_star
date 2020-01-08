@@ -1,68 +1,105 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 观星者
 
-## Available Scripts
+### 一、项目当前状况
 
-In the project directory, you can run:
+- 访问地址
 
-### `yarn start`
+| 环境 | 地址 | 账号 | 密码 |
+| ------ | ------ | ------ | ------ |
+| 测试 |  |  |  |
+| 生产 |  |  |  |
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 当前版本：1.0.0
+- 代码托管
+   - 工具：Git + SourceTree
+   - 地址: https://github.com/ZindexYG/north_star.git
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### 二、开发相关
+#### 1. 技术栈部分
+- 框架和库
+    -   React
+    -   React-Redux
+    -   React-Router
+    -   Redux-Saga
+    -   lodash
+    -   React-markdown
+    -   bizcharts
+- 项目结构
 
-### `yarn test`
+```
+\north_star
+  |-- public
+  |-- src
+  |   |--assets/                           \\ 公共静态资源文件
+  |   |   |--images/                       \\ 图片资源
+  |   |   |--styles/                       \\ 样式资源
+  |   |   |--normalize.less                \\ 去除浏览器自带样式
+  |   |--componetns/                       \\ 公用组件
+  |   |   |--debounce/                     \\ 防抖函数
+  |   |   |--featureButton/                \\ 公用 btn
+  |   |   |--iconFont/                     \\ 自定义 icon
+  |   |   |--searchInput/                  \\ 查询 Input
+  |   |--containers/                       \\ smart 组件
+  |   |   |--details/                      \\ 详情界面
+  |   |   |--stargazing/                   \\ 观星台
+  |   |--layout/                           \\ 布局
+  |   |   |--layoutHeader.js               \\ header 栏
+  |   |   |--layoutHeader.less             \\ header 样式
+  |   |   |--layoutModal.js                \\ layout modal
+  |   |   |--layoutModal.less              \\ layout modal 样式
+  |   |   |--reducer.js                    \\ reducer 文件
+  |   |   |--saga.js                       \\ saga 文件
+  |   |--untils/                           \\ 公用函数
+  |   |   |--colors.js                     \\ 色值
+  |   |   |--G2.theme.js                   \\ G2 自定主题
+  |   |   |--index.js                      \\ 公用函数
+  |   |   |--request.js                    \\ axios 请求
+  |   |--views/                            \\ 界面
+  |   |   |--login/                        \\ 登录界面
+  |   |   |--main/                         \\ 主界面
+  |   |--App.js                            \\ 主 router
+  |   |--index.js                          \\ 入口函数
+  |   |--reducers.js                       \\ 主 reducers
+  |   |--sagas.js                          \\ 主 sagas
+  |   |--serviceWorker.js
+  |-- .gitgonre
+  |-- config-overrides.js
+  |-- package.json
+  |-- README.md
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 开发规范
 
-### `yarn build`
+#### 2. 业务部分
+- 产品设计文档
+   - 相关地址链接
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- UI 设计稿
+   - 相关地址链接
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- 业务简介
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 3. 工程化部分
+- 相关工程化工具链接：暂无
+- 或者配置说明：暂无
 
-### `yarn eject`
+### 三、部署相关
+- 部署负责人
+- 发布方式
+   - 测试环境
+   - 生产环境
+- 系统环境
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| 环境 | 地址 | 账号 | 密码 | 配置信息 |
+| ------ | ------ | ------ | ------ | ------------ |
+| 测试 |  |  |  |  |
+| 生产 |  |  |  |  |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 四、后端相关
+- 后端负责人
+- API 文档
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 五、测试相关
+- 测试负责人
+- 测试用例和测试报告
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
